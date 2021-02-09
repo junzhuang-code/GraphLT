@@ -89,7 +89,6 @@ class LabelTransition():
         Y_pred_sm = torch.FloatTensor(Y_pred_sm)
         Y_noisy = torch.LongTensor(Y_noisy)
         C = torch.FloatTensor(C)
-        #C_0 = C.clone().detach()
         TM_warmup = torch.FloatTensor(TM_warmup)
         # Setup the GPU
         if GPU >= 0:
