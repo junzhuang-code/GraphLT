@@ -63,7 +63,7 @@ def perturb_feat(rows, cols, feat_val=1.):
 
 def format_check(pert_adj, len_graph, num_connect):
     """Check the format of perturbator adj"""
-    # input: attack_adj: attacker adj matrix (scipy sparse matrix);
+    # input: pert_adj: perturbator adj matrix (scipy sparse matrix);
     # for each new node k_i, the number of its link should be smaller or equal to the threshold.
     if pert_adj.getnnz(axis=1).max() <= num_connect: # Should be True
         check1 = True
@@ -178,9 +178,9 @@ if __name__ == "__main__":
     # Path for saving the parameters
     path = 'runs/{0}_{1}_nr{2}/'.format(data_name, model_name, NOISY_RATIO) + 'model_best.pth.tar'
 
-    # ---Evaluation on the attacked testing nodes---
-    print("Evaluation on the target nodes.")
-    # Padding the label and test mask with zero for perturbator node
+    # ---Evaluation on the perturbed victim nodes---
+    print("Evaluation on the perturbed victim nodes.")
+    # Padding the label and target mask with zero for perturbator nodes
     label_padding = torch.zeros((rows, ), dtype=torch.long)
     target_mask_padding = torch.zeros((rows, ), dtype=bool)
     if cuda: # Setup GPU if necessary
@@ -194,8 +194,8 @@ if __name__ == "__main__":
         target_mask_new = target_mask_new.cuda()
     evaluation(model, optimizer, path, graph_pert, feat_pert, label_new, target_mask_new)
 
-    # ---Generate predicted label after interference---
-    print("Generate the predicted label after perturbation.")
+    # ---Generate the predicted labels after perturbation---
+    print("Generate the predicted labels after perturbation.")
     Y_pred, Y_pred_sm = prediction(model, optimizer, path, graph_pert, feat_pert)
     if cuda:
         Y_pred, Y_pred_sm = Y_pred.cpu(), Y_pred_sm.cpu()
