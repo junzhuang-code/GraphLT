@@ -29,12 +29,12 @@ For Conda users, you may create a new Conda environment using: **conda env creat
  1. *pretrain.py*: Pre-train GCN model on given dataset
  2. *perturbation.py*: Simulate non-malicious perturbations
  3. *main.py*: Infer label by GraphLT
- 4. *models_GCN.py*/*models_LT.py*: model scripts
+ 4. *models_GCN.py*/*models_LT.py*: Model scripts
  5. *load_data.py*: Load data script
  6. *utils.py*: Utils modules
 ##### data:
- 1. *kdd20_s1/kdd20_s2*: two directories that store KDD20 datasets
- 2. *noisy_label*: a directory that stores labels
+ 1. *kdd20_s1/kdd20_s2*: Two directories that store KDD20 datasets
+ 2. *noisy_label*: A directory that stores labels
 
 #### Runs
  1. Pre-train GCN model on given dataset \
