@@ -29,7 +29,7 @@ except:
     GPU = -1
     is_inferable = True # True / False
     NUM_INFER = 100 # the number of total epochs for inference
-    WARMUP_STEP = 50 # the number of epochs for warm-up stage
+    WARMUP_STEP = 20 # the number of epochs for warm-up stage
 
 # ---Load groundtruth label, predicted label, noisy label and initial transition matrix---
 label, Y_noisy, train_mask, val_mask, test_mask = \
