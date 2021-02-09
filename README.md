@@ -6,7 +6,8 @@
 Under reviewed by KDD 2021'
 
 ### Dataset:
- kdd20_s1, kdd20_s2, cora, citeseer, amazoncobuy, coauthor, reddit
+ kdd20_s1, kdd20_s2, cora, citeseer, amazoncobuy, coauthor, reddit \
+ KDD20 Datasets can be downloaded from **https://www.biendata.xyz/competition/kddcup_2020/**
 
 ### Getting Started:
 #### Prerequisites
