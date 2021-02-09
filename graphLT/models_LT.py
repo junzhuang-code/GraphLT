@@ -75,7 +75,6 @@ class LabelTransition():
             GPU: the ID of GPU device;
             NUM_EPOCHS: the number of training epochs (int);
             WARMUP_STEP: using TM_warmup if step < WARMUP_STEP (int);
-            is_fakenodes: whether detect fake nodes (boolean).
         @return:
             Y_infer: new inferred label (1D array: NUM_SAMPLES x 1);
             C: counting matrix (2D array: NUM_CLASSES x NUM_CLASSES).
@@ -87,7 +86,6 @@ class LabelTransition():
         # Generate counting matrix
         C = self.generate_counting_matrix(Y_pred, Y_noisy, int(Y_pred_sm.shape[1]))
         # Convert to pytorch tensor
-        #Y_pred = torch.LongTensor(Y_pred)
         Y_pred_sm = torch.FloatTensor(Y_pred_sm)
         Y_noisy = torch.LongTensor(Y_noisy)
         C = torch.FloatTensor(C)
@@ -105,11 +103,10 @@ class LabelTransition():
         else:
             interval = 10
         # Record the data if necessary
-        writer = SummaryWriter(log_dir=os.path.join("runs", 'Logs_NS'))
+        writer = SummaryWriter(log_dir=os.path.join("runs", 'Logs_LT'))
 
         for step in range(NUM_EPOCHS):
             # Update transition matrix TM for every n steps
-            #if step >= interval and step % interval == 0:
             if step % interval == 0:
                 TM_i = (C + self.ALPHA) / torch.sum(C + self.ALPHA, axis=1, keepdims=True)
                 TM_i = TM_i.cuda() if GPU >= 0 else TM_i
@@ -128,7 +125,7 @@ class LabelTransition():
                 C[z_dict[idx_i]][y_dict[idx_i]] += 1
 
             # Compute accuracy for every n steps
-            # Tensorboard --logdir=./runs/Logs_NS --port 8999
+            # Tensorboard --logdir=./runs/Logs_LT --port 8999
             if step % interval == 0:
                 Y_infer_i = np.array([v for v in z_dict.values()])
                 acc_i = accuracy_score(Y_gt, Y_infer_i)
