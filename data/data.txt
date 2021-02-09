@@ -1,0 +1,1 @@
+Under "data" directory, "kdd20_s1", "kdd20_s2" and "noisy_label" should exist.
