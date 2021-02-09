@@ -48,7 +48,7 @@ def perturb_adj(rows, cols, target_nodes_list, num_connect, seed=0):
     np.random.seed(seed)
     col_idx = np.random.choice(target_nodes_list, \
                                    (rows, num_connect), replace=False)
-    pert_adj = np.zeros((rows, cols), dtype=np.int8) # 生成邻接矩阵
+    pert_adj = np.zeros((rows, cols), dtype=np.int8)
     for r in range(rows):
         pert_adj[r, col_idx[r]] = 1
     return ss.csr_matrix(pert_adj) # returns as a scipy sparse matrix
