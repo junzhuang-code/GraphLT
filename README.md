@@ -1,4 +1,4 @@
-# Anti-perturbation of Online Social Networks via Bayesian Label Transition
+# Deperturbation of Online Social Networks via Bayesian Label Transition
 
 ### Authors: Anonymous Authors
 
