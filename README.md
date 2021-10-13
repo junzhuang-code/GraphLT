@@ -3,7 +3,7 @@
 ### Authors: Anonymous Authors
 
 ### Paper:
-Under reviewed by WSDM 2022'
+Under reviewed by SDM 2022'
 
 ### Dataset:
  kdd20_s1, kdd20_s2, cora, citeseer, amazoncobuy, coauthor, reddit \
