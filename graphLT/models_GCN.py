@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@title: Anti-perturbation of Online Social Networks via Bayesian Label Transition
+@title: Deperturbation of Online Social Networks via Bayesian Label Transition
 @topic: GCN Models
 @authors: Anonymous Authors
 """
