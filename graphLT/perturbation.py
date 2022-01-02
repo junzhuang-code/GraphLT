@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@title: Anti-perturbation of Online Social Networks via Bayesian Label Transition
+@title: Deperturbation of Online Social Networks via Bayesian Label Transition
 @topic: Simulate non-malicious perturbation (random connections)
-@authors: Anonymous Authors
+@authors: Jun Zhuang, Mohammad Al Hasan
 """
 
 import sys
