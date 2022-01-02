@@ -3,7 +3,7 @@
 """
 @title: Deperturbation of Online Social Networks via Bayesian Label Transition
 @topic: GCN Models
-@authors: Anonymous Authors
+@authors: Jun Zhuang, Mohammad Al Hasan
 """
 
 from dgl.nn.pytorch import GraphConv, SGConv, SAGEConv, TAGConv, GINConv
