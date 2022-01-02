@@ -3,7 +3,7 @@
 """
 @title: Deperturbation of Online Social Networks via Bayesian Label Transition
 @topic: Model for Label Transition
-@authors: Anonymous Authors
+@authors: Jun Zhuang, Mohammad Al Hasan
 """
 
 import os
