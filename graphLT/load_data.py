@@ -3,7 +3,7 @@
 """
 @title: Deperturbation of Online Social Networks via Bayesian Label Transition
 @topic: Load dataset
-@authors: Anonymous Authors
+@authors: Jun Zhuang, Mohammad Al Hasan
 """
 
 from utils import read_pickle, preprocess_dgl_adj
