@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 @title: Deperturbation of Online Social Networks via Bayesian Label Transition
-@topic: Employ GraphLT model to infer label
-@authors: Anonymous Authors
+@topic: Employ GraphLT model to infer labels
+@authors: Jun Zhuang, Mohammad Al Hasan
 """
 
 import sys
