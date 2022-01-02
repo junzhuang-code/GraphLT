@@ -29,7 +29,7 @@ For Conda users, you may create a new Conda environment using: **conda env creat
 
 #### Directories
 ##### graphLT:
- 1. *pretrain.py*: Pre-train GCN model on given dataset
+ 1. *pretrain.py*: Train the GCN-based node classifier on given dataset
  2. *perturbation.py*: Simulate non-malicious perturbations
  3. *main.py*: Infer label by GraphLT
  4. *models_GCN.py*/*models_LT.py*: Model scripts
@@ -40,7 +40,7 @@ For Conda users, you may create a new Conda environment using: **conda env creat
  2. *noisy_label*: A directory that stores labels
 
 #### Runs
- 1. Pre-train GCN model on given dataset \
+ 1. Train the GCN-based node classifier on given dataset \
   python pretrain.py -data_name -model_name -NUM_EPOCHS -GPU -NOISY_RATIO -is_trainable \
   e.g. python pretrain.py cora GCN 200 0 0.1 true
 
