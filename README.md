@@ -54,3 +54,16 @@ For Conda users, you may create a new Conda environment using: **conda env creat
 
  4. Visualization with Tensorboard \
   Under the directory of "graphLT", run: Tensorboard --logdir=./runs/Logs_LT --port=8999
+  
+### Cite
+Please cite our paper if you think this repo is helpful.
+```
+@inproceedings{zhuang2022deperturbation,
+  title={Deperturbation of Online Social Networks via Bayesian Label Transition},
+  author={Zhuang, Jun and Al Hasan, Mohammad},
+  booktitle={Proceedings of the 2022 SIAM International Conference on Data Mining (SDM)},
+  pages={603--611},
+  year={2022},
+  organization={SIAM}
+}
+```
