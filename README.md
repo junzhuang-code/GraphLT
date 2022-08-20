@@ -20,7 +20,7 @@ Online social networks (OSNs) classify users into different categories based on 
  pytorch, dgl, numpy, scipy, sklearn
 
 #### Clone this repo
-**git clone https://github.com/[user_name]/GraphLT.git** \
+**git clone https://github.com/junzhuang-code/GraphLT.git** \
 **cd GraphLT/graphLT**
 
 #### Install dependencies
